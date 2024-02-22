@@ -1,0 +1,9 @@
+{
+    "website": "Slots Gator 777",
+    "weburl": "SlotsGator777.com",
+    "currency":"BRL",
+    "currencySymbol":"R$",
+    "sourceUrl": "http://127.0.0.1:8080/static/game/",
+    "noLoggedPic": "http://localhost:8080/static/banner/2.png",
+    "loginPic": "http://localhost:8080/static/banner/1.png"
+}
