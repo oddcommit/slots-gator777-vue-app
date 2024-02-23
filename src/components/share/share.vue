@@ -1113,7 +1113,7 @@ export default {
 }
 
 .reward-info {
-    background-color: rgba(91,16,23, 0.9);
+    background-color: #641BE9;
     margin-top: 10px;
     width: 100%;
     height: auto;
@@ -1237,9 +1237,11 @@ export default {
                 .receive {
                     padding: 3px 10px;
                     font-size: 12px;
-                    color: #333;
-                    background-color: #ffc515;
+                    color: white;
+                    background-image: linear-gradient(180deg,#A400DE 0%,#3E007C 100%),linear-gradient(180deg,rgb(200,169,217),rgb(114,68,190));
+                    box-shadow: 0 0 22px rgba(15,76,212,.57), 0 1px 4px rgba(24,0,73,.7), inset 0 0 9px rgba(233,58,255,.6);
                     border-radius: 6px;
+                    border: 1px solid white;
                 }
             }
         }
@@ -1470,7 +1472,7 @@ export default {
 
 .share-info {
     margin-top: 10px;
-    background-color: rgba(91,16,23, 0.9);
+    background-color: #641BE9;
     width: 100%;
     padding: 16px 12px;
     display: flex;
@@ -1501,7 +1503,7 @@ export default {
             box-sizing: border-box;
 
             input {
-                background-color: rgb(139,36,37);
+                background-color: #641BE9;
                 color: #ffd727;
                 font-size: 12px;
                 border-radius: 4px;
@@ -1511,7 +1513,8 @@ export default {
             .button {
                 cursor: pointer;
                 margin-left: 6px;
-            background-image: linear-gradient(to bottom, rgba(251,239,181), rgba(217,173,108));
+                background: #FBD81E;
+                box-shadow: 0 0 0.2rem rgba(251,216,30,.3), inset 0 -0.04rem 0.06rem 0.02rem #f6a80b;
                 color: rgb(140,36,43) !important;
                 font-weight: 400;
                 box-shadow: unset;
@@ -1520,7 +1523,7 @@ export default {
                 font-size: 13px !important;
                 letter-spacing: 0 !important;
                 transition: all .2s cubic-bezier(.02, .54, .58, 1);
-                border: none;
+                border: 2px solid white;
                 font-family: Noto Sans Thai;
                 text-align: center;
             }
@@ -1531,7 +1534,7 @@ export default {
 
 .award-info {
     margin-top: 10px;
-    background-color: rgba(91,16,23, 0.9);
+    background-color: #641BE9;
     width: 100%;
     padding: 16px 20px 10px;
     display: flex;
@@ -1604,7 +1607,7 @@ export default {
     box-sizing: border-box;
 
     .invite-item {
-    background-color: rgba(91,16,23, 0.9);
+        background-color: #641BE9;
         border-radius: 6px;
         width: 48%;
         position: relative;

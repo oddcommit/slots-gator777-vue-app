@@ -996,14 +996,15 @@ input:-ms-input-placeholder {
 
 .login-button {
     cursor: pointer;
-            background-image: linear-gradient(to bottom, rgba(251,239,181), rgba(217,173,108));
-    color: rgb(140,36,43) !important;
+    background-image: linear-gradient(180deg,#FFBD36 0%,#FF2200 100%),linear-gradient(180deg,rgb(255,239,177),rgb(242,172,0));
+    box-shadow: 0 0 40px rgba(19,1,49,.6), 0 1px 6px rgba(24,0,73,.7), inset 0 0 5px rgba(255,108,0,.85);
+    color: white !important;
     height: 44px;
     width: 100%;
     font-size: 18px !important;
     letter-spacing: 0 !important;
-    border-radius: 4px !important;
-    border: none;
+    border-radius: 16px !important;
+    border: 3px solid white;
     text-align: center;
 }
 
@@ -1027,7 +1028,7 @@ input:-ms-input-placeholder {
 
     .title-tab {
         cursor: pointer;
-        color: rgb(252,132,107);
+        color: yellow;
         font-weight: 400;
         font-size: 16px;
         font-family: Arial;
@@ -1035,8 +1036,9 @@ input:-ms-input-placeholder {
     }
 
     .active {
-            color: rgb(140,36,43);
-            background-image: linear-gradient(to bottom, rgba(251,239,181), rgba(217,173,108));
+        color: white;
+        background: #641BE9;
+        box-shadow: 0 -0.04rem 0.12rem rgba(42,0,128,.8), inset 0 0.02rem 0.04rem #9a62ff, 0 0.01rem 0.02rem #000;
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
     }
@@ -1464,14 +1466,15 @@ input:-ms-input-placeholder {
         cursor: pointer;
         width: 32%;
         padding: 9px 0;
-        background: rgb(234,62,58);
-        color: rgb(255,186,122);
+        background: #641BE9;
+        box-shadow: inset 0 -2px 6px #2a0080,inset 0 1px 2px #9a62ff!important;
+        border-radius: 10px;
+        color: white;
         font-family: Arial;
         font-size: 18px;
         font-weight: 400;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
-        border-radius: 4px;
         margin-bottom: 10px;
         position: relative;
 
@@ -1518,8 +1521,10 @@ input:-ms-input-placeholder {
     }
 
     .active {
-            background-image: linear-gradient(to bottom, rgba(251,239,181), rgba(217,173,108));
-            color: rgb(140,36,43);
+        background: #FBD81E;
+        box-shadow: 0 0 21px rgba(251,216,30,.6),inset 0 -3px 5px 2px #f6a80b!important;
+        border-radius: 10px;
+        color: #b03f00;
 
         img {
             display: block !important;
@@ -1533,14 +1538,15 @@ input:-ms-input-placeholder {
 
 .register-button {
     cursor: pointer;
-            background-image: linear-gradient(to bottom, rgba(254,117,249), rgba(220,84,246));
-    color: rgb(140,36,43) !important;
+    background-image: linear-gradient(180deg,#A400DE 0%,#3E007C 100%),linear-gradient(180deg,rgb(200,169,217),rgb(114,68,190));
+    box-shadow: 0 0 22px rgba(15,76,212,.57), 0 1px 4px rgba(24,0,73,.7), inset 0 0 9px rgba(233,58,255,.6);
+    color: white !important;
     height: 44px;
     width: 100%;
     font-size: 18px !important;
     letter-spacing: 0 !important;
-    border-radius: 4px !important;
-    border: none;
+    border-radius: 16px !important;
+    border: 3px solid white;
     text-align: center;
 }
 

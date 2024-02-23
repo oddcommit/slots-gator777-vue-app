@@ -1,13 +1,17 @@
 <template>
     <div class="index-page">
-        <!-- <div class="index-bg"></div> -->
-        <!-- <div :style="{ display: isShowSlider ? 'block' : 'none' }" class="slider-menu-masking" @click="changeSlider">
+        <div :style="{ display: isShowSlider ? 'block' : 'none' }" class="slider-menu-masking" @click="changeSlider">
             <div class="slider-menu" @click.stop="func1()">
-                <div class="user-info" :class="GLOBAL.userInfo.accountid > 0 ? '' : 'user-info-hidden'">
-                    <img class="avatar" src="../../assets/me/default.png" />
-                    <div class="info-value">
-                        <div class="nickname"><span>{{ GLOBAL.userInfo.nickname }}</span></div>
-                        <div class="username">{{ GLOBAL.lanLocal['id'] }}:{{ GLOBAL.userInfo.accountid }}</div>
+                <div style="display: flex; justify-content: space-between;">
+                    <div class="user-info" :class="GLOBAL.userInfo.accountid > 0 ? '' : 'user-info-hidden'">
+                        <img class="avatar" src="../../assets/me/default.png" />
+                        <div class="info-value">
+                            <div class="nickname"><span>{{ GLOBAL.userInfo.nickname }}</span></div>
+                            <div class="username">{{ GLOBAL.lanLocal['id'] }}:{{ GLOBAL.userInfo.accountid }}</div>
+                        </div>
+                    </div>
+                    <div class="user-info" @click="changeSlider">
+                        <img class="menu-close" src="../../assets/index/close.png" />
                     </div>
                 </div>
                 <div class="menu-list">
@@ -66,7 +70,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <div class="loading-masking" v-if="loading">
             <div class="loading-page">
@@ -92,8 +96,8 @@
         <SharePage v-if="tabIndex == 10" @close="closeModal" @reload="reload"></SharePage>
         <VipPage v-if="tabIndex == 11" @close="closeModal" @toDeposit="toDeposit"></VipPage>
         <GameRecordPage v-if="tabIndex == 12" @close="closeModal"></GameRecordPage>
-        <!-- <Tabbar :accountid="GLOBAL.userInfo.accountid" v-if="tabIndex != 5 && tabIndex != 51" :index="tabIndex" :emailCount="emailCount" @change="showPage">
-        </Tabbar> -->
+        <Tabbar :accountid="GLOBAL.userInfo.accountid" v-if="tabIndex != 5 && tabIndex != 51" :index="tabIndex" :emailCount="emailCount" @change="showPage">
+        </Tabbar>
         <div class="page-masking" v-if="activeList.length > 0 && ((activetype == 1 && activeList[0]['active'] != ''))">
             <div class="active-content">
                 <img class="img" v-if="activetype == 1" :src="activeList[0]['active']" />
@@ -624,7 +628,6 @@ export default {
 
     .slider-menu-masking {
         width: 300px !important;
-        display: block !important;
     }
 
     .slider-menu {
@@ -648,6 +651,7 @@ export default {
         height: -moz-calc(100vh) !important;
         height: -webkit-calc(100vh) !important;
         height: calc(100vh) !important;
+        top: 0px !important;
     }
 
     .user-info-hidden {
@@ -697,13 +701,13 @@ export default {
 
 .slider-menu {
     position: absolute;
-    top: 0;
+    top: -60px;
     left: 0;
     z-index: 1;
-    background-color: rgb(142, 38, 39);
+    background-color: #1D0059;
     height: -moz-calc(100vh - 60px);
     height: -webkit-calc(100vh - 60px);
-    height: calc(100vh - 60px);
+    height: 100vh;
     width: 75%;
     overflow-y: scroll;
     padding: 0 18px 160px;
@@ -720,6 +724,10 @@ export default {
         align-items: center;
         box-sizing: border-box;
 
+        .menu-close {
+            width: 25px;
+            height: 25px;
+        }
         .avatar {
             width: 44px;
             height: 44px;
@@ -778,14 +786,16 @@ export default {
         width: 100%;
         display: flex;
         align-items: center;
-        border-radius: 3px;
+        border-radius: 15px;
         position: relative;
         padding: 10px 6px;
         box-sizing: border-box;
         text-decoration: none;
         position: relative;
-        border-bottom: 1px solid rgb(124, 30, 31);
         cursor: pointer;
+        background: #641BE9;
+        box-shadow: inset 0 -2px 6px #2a0080, inset 0 1px 2px #9a62ff;
+        margin-top: 5px;
 
         .icon {
             height: auto;
@@ -799,6 +809,7 @@ export default {
             font-size: 14px;
             font-family: Arial;
             line-height: 1;
+            font-weight: 700;
         }
 
         .ft {

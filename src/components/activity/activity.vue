@@ -117,7 +117,7 @@ export default {
 
     .activity-box {
         cursor: pointer;
-        background-color: rgba(94,17,25,0.8);
+        background-color: #641BE9;
         border-radius: 10px;
         margin-bottom: 12px;
         box-sizing: border-box;
