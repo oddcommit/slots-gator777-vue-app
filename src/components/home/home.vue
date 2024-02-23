@@ -41,28 +41,39 @@
                         <div class="wrap-game-show">
                             <div class="container-list-game-slot">
                                 <div class="list-game-bacarat">
-                                    <template v-for="(game, index) in gameList">
-                                        <div class="game-menu">
-                                            <img class="menu-icon" v-if="game.title == 'HOT GAME' || game.title == 'PP'"
+                                    <div class="game-menu">
+                                        <template v-for="(game, index) in gameList">
+                                            <div class="game-menu-item" :class="`${game.type == selectedGameItem ? 'selected-game-menu-item' : ''}`" @click="changeGameItem(game.type)">
+                                                <img class="menu-icon" v-if="game.title == 'HOT GAME' || game.title == 'PP'"
                                                 style="height: 22px" :src="sourceUrl + game.title + '.png'" />
-                                            <img class="menu-icon" v-else :src="sourceUrl + game.title + '.png'" />
-                                            <div class="right">
-                                                <img src="../../assets/index/tudo.png" @click="showAllGame(game.type)" />
+                                                <img class="menu-icon" v-else :src="sourceUrl + game.title + '.png'" />
                                             </div>
-                                        </div>
-                                        <div class="game-item game-mobile" v-for="(item, i) in game.list" v-if="i < 6"
-                                            @click="toGame(item.gameid, item.type, item.roomid, item.open, item)">
-                                            <img class="game-img" v-if="game.type == 3"
-                                                :src="'https://lucas999.prerelease-env.biz/game_pic/square/200/' + item.gameid + '.png'" />
-                                            <img class="game-img" v-else
-                                                :src="sourceUrl + item.roomid + '_' + GLOBAL.lanCode + '.png'" />
-                                        </div>
-                                        <div class="game-item game-pc" v-for="(item, i) in game.list" v-if="i < 12"
-                                            @click="toGame(item.gameid, item.type, item.roomid, item.open, item)">
-                                            <img class="game-img" v-if="game.type == 3"
-                                                :src="'https://lucas999.prerelease-env.biz/game_pic/square/200/' + item.gameid + '.png'" />
-                                            <img class="game-img" v-else
-                                                :src="sourceUrl + item.roomid + '_' + GLOBAL.lanCode + '.png'" />
+                                        </template>
+                                    </div>
+                                    <template v-for="(game, index) in gameList">
+                                        <div v-if="game.type == selectedGameItem" class="list-game-bacarat">
+                                            <div class="game-menu-all">
+                                                <!-- <img class="menu-icon" v-if="game.title == 'HOT GAME' || game.title == 'PP'"
+                                                    style="height: 22px" :src="sourceUrl + game.title + '.png'" />
+                                                <img class="menu-icon" v-else :src="sourceUrl + game.title + '.png'" /> -->
+                                                <div class="right">
+                                                    <img src="../../assets/index/tudo.png" @click="showAllGame(game.type)" />
+                                                </div>
+                                            </div>
+                                            <div class="game-item game-mobile" v-for="(item, i) in game.list" v-if="i < 6"
+                                                @click="toGame(item.gameid, item.type, item.roomid, item.open, item)">
+                                                <img class="game-img" v-if="game.type == 3"
+                                                    :src="'https://lucas999.prerelease-env.biz/game_pic/square/200/' + item.gameid + '.png'" />
+                                                <img class="game-img" v-else
+                                                    :src="sourceUrl + item.roomid + '_' + GLOBAL.lanCode + '.png'" />
+                                            </div>
+                                            <div class="game-item game-pc" v-for="(item, i) in game.list" v-if="i < 12"
+                                                @click="toGame(item.gameid, item.type, item.roomid, item.open, item)">
+                                                <img class="game-img" v-if="game.type == 3"
+                                                    :src="'https://lucas999.prerelease-env.biz/game_pic/square/200/' + item.gameid + '.png'" />
+                                                <img class="game-img" v-else
+                                                    :src="sourceUrl + item.roomid + '_' + GLOBAL.lanCode + '.png'" />
+                                            </div>
                                         </div>
                                     </template>
                                 </div>
@@ -107,11 +118,6 @@
                         <div class="wrap-game-show">
                             <div class="container-list-game-slot">
                                 <div class="list-game-bacarat">
-                                    <div class="game-menu">
-                                        <img class="menu-icon" v-if="allGame.title == 'HOT GAME' || allGame.title == 'PP'"
-                                            style="height: 22px" :src="sourceUrl + allGame.title + '.png'" />
-                                        <img class="menu-icon" v-else :src="sourceUrl + allGame.title + '.png'" />
-                                    </div>
                                     <template v-for="(item, i) in allGame.list">
                                         <div class="game-item no-animate"
                                             @click="toGame(item.gameid, item.type, item.roomid, item.open, item)">
@@ -184,7 +190,7 @@ export default {
                 slidesPerView: 1,
                 spaceBetween: 0,
                 autoplay: {
-                    delay: 5000,
+                    delay: 2000,
                     stopOnLastSlide: false,
                     disableOnInteraction: false
                 }
@@ -194,7 +200,7 @@ export default {
                 slidesPerView: 3,
                 spaceBetween: 30,
                 autoplay: {
-                    delay: 5000,
+                    delay: 2000,
                     stopOnLastSlide: false,
                     disableOnInteraction: false
                 }
@@ -243,6 +249,7 @@ export default {
             allGameLib: [],
             closeMasking: false,
             gameType: -1,
+            selectedGameItem: 0
         }
     },
     mounted() {
@@ -278,6 +285,9 @@ export default {
         }
     },
     methods: {
+        changeGameItem(type) {
+            this.selectedGameItem = type;
+        },
         toBannerDetail(id) {
             this.$emit("detail", id)
         },
@@ -957,6 +967,8 @@ export default {
 
 .wrap-container {
     display: flex;
+    background-origin: padding-box,border-box;
+    background-image: linear-gradient(266deg,#1F015D,#4705B2),linear-gradient(18deg,#DA33FF,transparent,transparent);
 
     .item-content {
         width: 100%;
@@ -1247,16 +1259,59 @@ export default {
     align-items: center;
 }
 
+.game-menu-all {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 6px 0px;
+    margin-top: 10px;
+    position: relative;
+
+    .right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0.09rem 0.1rem 0.09rem 0.2rem;
+        z-index: 1;
+        color: #94acd3;
+        background: #161F2C;
+        border: 1px solid transparent;
+        background-clip: padding-box,border-box;
+        background-origin: padding-box,border-box;
+        background-image: linear-gradient(266deg,#1F015D,#4705B2),linear-gradient(18deg,#DA33FF,transparent,transparent);
+
+        >img {
+            cursor: pointer;
+            height: 10px;
+            width: auto;
+        }
+    }
+}
+
 .game-menu {
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 6px 8px;
+    justify-content: space-evenly;
+    padding: 6px 0px;
     margin-top: 10px;
     position: relative;
-    background-color: rgb(112, 20, 33);
-    border-radius: 50px;
+    background: linear-gradient(262deg,#22027A 0%,#4705B2 100%);
+    box-shadow: inset 0 0 0.26rem rgba(148,50,250,.5);
 
+    .game-menu-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 210px;
+        height: 30px;
+    }
+    .selected-game-menu-item {
+        background: url('../../assets/index/game-menu-back.png');
+        background-size: 100% 100%;
+    }
+    
     .menu-icon {
         width: auto;
         height: 15px;
@@ -1271,19 +1326,6 @@ export default {
         color: #fff;
         font-weight: 400;
         margin-left: 4px;
-    }
-
-    .right {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-
-        >img {
-            cursor: pointer;
-            height: 10px;
-            width: auto;
-        }
     }
 }
 
@@ -1589,7 +1631,6 @@ export default {
     max-width: 950px;
     margin: 40px 0.6rem 0;
     padding: 14px 0;
-    background: rgba(103, 22, 29, 0.9);
     border-radius: 12px;
     backdrop-filter: 3px;
     color: #fff;
@@ -1645,7 +1686,6 @@ export default {
 
 .game-cover {
     overflow-y: scroll;
-    background-color: rgb(144, 38, 40);
     background-image: none;
 
     .game-close {
@@ -1676,7 +1716,6 @@ export default {
     }
 
     .header-cover {
-        background-color: rgb(144, 38, 40);
         background-image: none;
     }
 
@@ -1716,7 +1755,6 @@ export default {
             width: 100%;
             max-width: 918px;
             height: 50px;
-            background-color: rgba(103, 22, 29, 0.9);
             display: flex;
             align-items: center;
             justify-content: center;

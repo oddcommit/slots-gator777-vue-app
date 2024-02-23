@@ -2,13 +2,19 @@
     <div class="login-masking" @click="close">
         <div style="width: 100%;" @click.stop="func1()">
             <div class="main-page" v-if="tag == 1">
-                <img class="logo" :src="require('../../../static/logo.png')" />
                 <div class="page-title">
                     <div class="title-item" :class="tag == 1 ? 'active' : ''" @click="changeTag(1)">
                         <div>{{ GLOBAL.lanLocal['login-low'] }}</div>
                     </div>
                     <div class="title-item" :class="tag == 2 ? 'active' : ''" @click="changeTag(2)">
                         <div>{{ GLOBAL.lanLocal['regnow'] }}</div>
+                    </div>
+                </div>
+                <div class="page-logo">
+                    <img class="logo" :src="require('../../assets/login/logo.png')" />
+                    <div>
+                        <p style="font-size: 16px;">Slots Gator 777</p>
+                        <p style="color: #94acd3;">Cassino Responsável</p>
                     </div>
                 </div>
                 <div class="input-box">
@@ -40,7 +46,6 @@
                 <div class="login-btn" @click="doLogin">{{ GLOBAL.lanLocal['login'] }}</div>
             </div>
             <div class="main-page" v-if="tag == 2">
-                <img class="logo" :src="require('../../../static/logo.png')" />
                 <div class="page-title">
                     <div class="title-item" :class="tag == 1 ? 'active' : ''" @click="changeTag(1)">
                         <div>{{ GLOBAL.lanLocal['login-low'] }}</div>
@@ -412,22 +417,17 @@ export default {
 
     .main-page {
         margin: 0 auto;
-        background-color: rgba(142,38,39);
-        background-image: linear-gradient(to bottom, rgba(233,69,69), rgba(142,38,39));
-        background-size: 100% 20px;
-        background-repeat: no-repeat;
+        background-clip: padding-box,border-box;
+        background-origin: padding-box,border-box;
+        background-image: linear-gradient(266deg,#25037F,#4705B2),linear-gradient(0deg,#DA33FF,transparent);
         width: 85%;
         max-width: 400px;
         max-height: 100%;
         overflow-y: scroll;
         padding: 26px 30px 30px;
         border-radius: 8px;
-        border: 2px solid rgb(254,230,124);
+        border: 1px solid transparent;
         box-sizing: border-box;
-        box-shadow: 3px 2px 3px rgb(113,28,33) inset,
-            0 2px 3px rgb(113,28,33) inset,
-            0 2px 3px rgb(113,28,33) inset,
-            0 2px 3px rgb(113,28,33) inset;
 
         h3,
         p {
@@ -443,11 +443,13 @@ export default {
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
+            border-radius: 100px;
+            background: linear-gradient(262deg, #22027A 0%, #35097b 100%) !important;
 
             .title-item {
-                color: rgb(235,96,101);
+                color: white;
                 font-size: 16px;
-                width: 45%;
+                width: 50%;
                 text-align: center;
                 line-height: 1.2;
                 cursor: pointer;
@@ -456,30 +458,49 @@ export default {
             }
 
             .active {
-                color: rgb(248,241,109);
-                background-color: rgb(112,20,33);
-                border-radius: 40px;
+                border-radius: 100px;
+                background: linear-gradient(180deg,#E704A8 0%,#931FFF 100%)!important;
+                box-shadow: inset 0 .1rem .16rem #ffaee2!important;
+                color: white;
+                font-weight: 700;
             }
         }
 
-        .logo {
-            margin: 0 auto 14px;
-            width: 140px;
-            height: auto;
+        .page-logo {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 30px;
+
+            .logo {
+                width: 69px;
+                height: 69px;
+            }
+
+            >div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: white;
+                margin-left: 10px;
+                font-weight: 700;
+                >p{
+                    margin: 0px;
+                }
+            }
         }
+        
 
         .input-box {
             position: relative;
             margin: 0 auto;
 
             .input {
-                background-color: rgb(112,20,33) !important;
+                background: #641BE9;
+                box-shadow: 0 -0.04rem 0.12rem rgba(42,0,128,.8), inset 0 0.02rem 0.04rem #9a62ff, 0 0.01rem 0.02rem #000;
                 height: 36px;
                 line-height: 36px;
                 width: 100%;
                 border-radius: 10px;
-                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) inset,
-                    0 1px 2px rgb(151,37,37);
                 border-width: 0;
                 padding: 0 12px;
                 font-size: 18px;
@@ -494,7 +515,7 @@ export default {
 
             .input::placeholder {
                 font-size: 16px;
-                color: rgb(212,67,72);
+                color: var(--van-cell-value-color);
             }
 
             .name-pre {
@@ -570,10 +591,15 @@ export default {
             line-height: 38px;
             border-radius: 38px;
             text-align: center;
-            color: rgb(140,36,43);
+            color: white;
             cursor: pointer;
             font-size: 15px;
-            background-image: linear-gradient(to bottom, rgba(251,239,181), rgba(217,173,108));
+            border: 1px solid transparent;
+            background-image: linear-gradient(180deg,#A400DE,#3E007C),linear-gradient(180deg,#C8A9D9,#7244BE);
+            box-shadow: 0 0.04rem 0.14rem rgba(24,0,73,.7), inset 0 0 0.3rem rgba(233,58,255,.6);
+            text-shadow: 0 1px 2px #104376;
+            font-weight: 700;
+            font-size: 16px;
         }
 
         .login-btn-disable {

@@ -1,9 +1,8 @@
 <template>
     <div>
-        <!-- <div class="x-footer">
+        <div class="x-footer">
             <div class="x-sub">
                 <div class="item" :class="tabIndex == 1 ? 'tab-selected' : ''" @click="toPage(1)">
-                    <img class="selected-bg" :src="require('../../assets/index/footer-selected.png')" />
                     <div class="tab-info">
                         <img class="sub-img" v-if="tabIndex == 1" :src="require('../../assets/index/lobby-selected.png')" />
                         <img class="sub-img" v-else :src="require('../../assets/index/lobby-normal.png')" />
@@ -13,7 +12,6 @@
             </div>
             <div class="x-sub">
                 <div class="item" :class="tabIndex == 2 ? 'tab-selected' : ''" @click="toPage(2)">
-                    <img class="selected-bg" :src="require('../../assets/index/footer-selected.png')" />
                     <div class="tab-info">
                         <img class="sub-img" v-if="tabIndex == 2"
                             :src="require('../../assets/index/activity-selected.png')" />
@@ -24,7 +22,6 @@
             </div>
             <div class="x-sub">
                 <div class="item" :class="tabIndex == 10 ? 'tab-selected' : ''" @click="toPage(10)">
-                    <img class="selected-bg" :src="require('../../assets/index/footer-selected.png')" />
                     <div class="tab-info">
                         <img class="sub-img" v-if="tabIndex == 10"
                             :src="require('../../assets/index/bonus-selected.png')" />
@@ -35,7 +32,6 @@
             </div>
             <div class="x-sub">
                 <div class="item" :class="tabIndex == 6 ? 'tab-selected' : ''" @click="toPage(6)">
-                    <img class="selected-bg" :src="require('../../assets/index/footer-selected.png')" />
                     <div class="tab-info">
                         <img class="sub-img" v-if="tabIndex == 6"
                             :src="require('../../assets/index/recharge-selected.png')" />
@@ -46,7 +42,6 @@
             </div>
             <div class="x-sub">
                 <div class="item" :class="tabIndex == 4 ? 'tab-selected' : ''" @click="toPage(4)">
-                    <img class="selected-bg" :src="require('../../assets/index/footer-selected.png')" />
                     <div class="tab-info">
                         <img class="sub-img" v-if="tabIndex == 4"
                             :src="require('../../assets/index/me-selected.png')" />
@@ -55,7 +50,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
 </template>
 <script>
@@ -123,8 +118,8 @@ export default {
     bottom: 0;
     width: 100%;
     z-index: 11;
-    background: url('../../assets/index/footer-bg.png');
-    background-size: 100% 100%;
+    background: linear-gradient(262deg,#22027A 0%,#4705B2 100%);
+    border-top: 1px solid white;
 }
 
 .x-sub {

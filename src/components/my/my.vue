@@ -921,7 +921,7 @@ export default {
         margin-top: 50px;
         width: 100%;
         border-radius: 16px;
-        background-color: rgba(91, 16, 23, 0.9);
+        background-color: #641BE9;
         position: relative;
 
         .user-info {
@@ -942,9 +942,11 @@ export default {
                     padding: 3px 24px;
                     text-align: center;
                     font-size: 18px;
-                    color: #fff;
+                    color: #b03f00;
                     border-radius: 60px;
-                    background-color: rgb(139,36,37);
+                    background: #FBD81E;
+                    box-shadow: 0 0 0.2rem rgba(251,216,30,.3), inset 0 -0.04rem 0.06rem 0.02rem #f6a80b;
+                    font-weight: 700;
                 }
             }
 
@@ -954,11 +956,13 @@ export default {
 
                 >span {
                     padding: 3px 24px;
-                    background-color: rgb(139,36,37);
+                    background: #FBD81E;
+                    box-shadow: 0 0 0.2rem rgba(251,216,30,.3), inset 0 -0.04rem 0.06rem 0.02rem #f6a80b;
                     text-align: center;
                     font-size: 14px;
                     border-radius: 60px;
-                    color: #ffd616;
+                    color: #b03f00;
+                    font-weight: 700;
                 }
             }
         }
@@ -1217,7 +1221,7 @@ export default {
 
     .menu-item {
         cursor: pointer;
-        background-color: rgba(91, 16, 23, 0.9);
+        background-color: #641BE9;
         padding: 10px 22px;
         display: flex;
         align-items: center;
@@ -1251,7 +1255,8 @@ export default {
     font-size: 18px;
     color: #000;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 16px;
+    border: 3px solid white;
 }
 
 .records-masking {
@@ -1272,7 +1277,7 @@ export default {
         width: 98%;
         max-width: 500px;
         height: 80%;
-        background-color: rgb(112,20,33);
+        background-color: #641BE9;
         border-radius: 8px;
         padding: 0 4px;
 

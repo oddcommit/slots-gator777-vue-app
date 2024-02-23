@@ -57,37 +57,8 @@
 
             {"gameid": 126, "roomid": 50011, "open": 1, "type": 4,"pg_gameid": 1256, "pg_roomid": 1256, "pg_type": 2}
         ]
-    },{
-        "title":"OUTRO-BET",
-        "type": 1,
-        "list": [
-            {"gameid": 1256, "roomid": 1256, "open": 1, "type": 1, "v_gameid": 126, "v_roomid": 50011, "v_type": 4},
-            {"gameid": 1257, "roomid": 1257, "open": 1, "type": 1},
-            {"gameid": 1258, "roomid": 1258, "open": 1, "type": 1},
-            {"gameid": 1259, "roomid": 1259, "open": 1, "type": 1},
-            {"gameid": 1254, "roomid": 1254, "open": 1, "type": 1},
-            {"gameid": 1255, "roomid": 1255, "open": 1, "type": 1},
-            {"gameid": 1256, "roomid": 1256, "open": 1, "type": 1},
-            {"gameid": 1257, "roomid": 1257, "open": 1, "type": 1},
-            {"gameid": 1258, "roomid": 1258, "open": 1, "type": 1},
-            {"gameid": 1259, "roomid": 1259, "open": 1, "type": 1},
-            {"gameid": 1254, "roomid": 1254, "open": 1, "type": 1},
-            {"gameid": 1255, "roomid": 1255, "open": 1, "type": 1},
-            {"gameid": 1256, "roomid": 1256, "open": 1, "type": 1},
-            {"gameid": 1257, "roomid": 1257, "open": 1, "type": 1},
-            {"gameid": 1258, "roomid": 1258, "open": 1, "type": 1},
-            {"gameid": 1259, "roomid": 1259, "open": 1, "type": 1},
-            {"gameid": 1254, "roomid": 1254, "open": 1, "type": 1},
-            {"gameid": 1255, "roomid": 1255, "open": 1, "type": 1},
-            {"gameid": 1253, "roomid": 1253, "open": 1, "type": 1}
-        ]
-    },{
-        "title":"PG",
-        "type": 2,
-        "list": [
-            {"gameid": 1543462, "roomid": 44011, "open": 1, "type": 2}
-        ]
-    },{
+    },
+    {
         "title":"PP",
         "type": 3,
         "list": [
@@ -475,6 +446,31 @@
             {"gameid": "vs25dwarves_new", "roomid": 49821, "open": 1, "type": 3},
             {"gameid": "vs7monkeys", "roomid": 49831, "open": 1, "type": 3},
             {"gameid": "vs13g", "roomid": 49841, "open": 1, "type": 3}
+        ]
+    },
+    {
+        "title":"OUTRO-BET",
+        "type": 1,
+        "list": [
+            {"gameid": 1256, "roomid": 1256, "open": 1, "type": 1, "v_gameid": 126, "v_roomid": 50011, "v_type": 4},
+            {"gameid": 1257, "roomid": 1257, "open": 1, "type": 1},
+            {"gameid": 1258, "roomid": 1258, "open": 1, "type": 1},
+            {"gameid": 1259, "roomid": 1259, "open": 1, "type": 1},
+            {"gameid": 1254, "roomid": 1254, "open": 1, "type": 1},
+            {"gameid": 1255, "roomid": 1255, "open": 1, "type": 1},
+            {"gameid": 1256, "roomid": 1256, "open": 1, "type": 1},
+            {"gameid": 1257, "roomid": 1257, "open": 1, "type": 1},
+            {"gameid": 1258, "roomid": 1258, "open": 1, "type": 1},
+            {"gameid": 1259, "roomid": 1259, "open": 1, "type": 1},
+            {"gameid": 1254, "roomid": 1254, "open": 1, "type": 1},
+            {"gameid": 1255, "roomid": 1255, "open": 1, "type": 1},
+            {"gameid": 1256, "roomid": 1256, "open": 1, "type": 1},
+            {"gameid": 1257, "roomid": 1257, "open": 1, "type": 1},
+            {"gameid": 1258, "roomid": 1258, "open": 1, "type": 1},
+            {"gameid": 1259, "roomid": 1259, "open": 1, "type": 1},
+            {"gameid": 1254, "roomid": 1254, "open": 1, "type": 1},
+            {"gameid": 1255, "roomid": 1255, "open": 1, "type": 1},
+            {"gameid": 1253, "roomid": 1253, "open": 1, "type": 1}
         ]
     }
 ]

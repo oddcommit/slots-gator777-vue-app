@@ -3,8 +3,8 @@
         <div class="header-content">
             <img class="menu-icon" v-if="tabIndex == 2 ||tabIndex == 21 || tabIndex == 10 || tabIndex == 4 || tabIndex == 6 || tabIndex == 3 || tabIndex == 31"
                 @click="close" :src="require('../../assets/icon/back.png')" />
-            <img class="menu-icon menu-mobile" @click="changeSlider" :src="require('../../assets/icon/left-menu.png')" />
-            <img class="menu-icon menu-pc" @click="changeSlider" :src="require('../../assets/icon/left-menu-pc.png')" />
+            <img v-if="tabIndex != 2 && tabIndex != 21 &&  tabIndex != 10 &&  tabIndex != 4 &&  tabIndex != 6 &&  tabIndex != 3 &&  tabIndex != 31" class="menu-icon menu-mobile" @click="changeSlider" :src="require('../../assets/icon/left-menu.png')" />
+            <img v-if="tabIndex != 2 && tabIndex != 21 &&  tabIndex != 10 &&  tabIndex != 4 &&  tabIndex != 6 &&  tabIndex != 3 &&  tabIndex != 31" class="menu-icon menu-pc" @click="changeSlider" :src="require('../../assets/icon/left-menu-pc.png')" />
             <img class="main-icon" :src="require('../../../static/logo.png')" />
             <div class="right-item">
                 <div class="btn-w" v-if="accountid == 0" @click="toLogin">
@@ -222,8 +222,10 @@ export default {
         }
 
         .box-amount {
-            color: #fff;
-            background-color: rgb(112,20,33);
+            color: #b03f00;
+            font-weight: 700;
+            background: #FBD81E;
+            box-shadow: 0 0 0.2rem rgba(251,216,30,.3), inset 0 -0.04rem 0.06rem 0.02rem #f6a80b;
             display: flex;
             align-items: center;
             box-sizing: border-box;
@@ -231,7 +233,7 @@ export default {
             padding: 0 6px;
             height: 28px;
             line-height: 28px;
-            border-radius: 28px;
+            border-radius: 100px;
 
             >img {
                 cursor: pointer;

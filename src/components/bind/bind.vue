@@ -290,10 +290,10 @@ export default {
     padding: 20px 16px 8px;
     display: flex;
     align-items: center;
-        color: rgb(252,132,107);
+    color: white;
     border-bottom: 2px solid rgb(221,203,157);
     position: relative;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 18px;
 
     .title-img {
@@ -721,7 +721,7 @@ export default {
 }
 .login-info-item {
     text-align: left;
-    background: rgb(94,17,25);
+    background: #641BE9;
     height: 44px;
     border-radius: 4px;
     position: relative;
@@ -747,16 +747,21 @@ export default {
     text-align: left;
 }
 
+input::placeholder {
+    color: white;
+}
+
 .login-button {
     cursor: pointer;
-            background-image: linear-gradient(to bottom, rgba(251,239,181), rgba(217,173,108));
-    color: rgb(140,36,43) !important;
+    background-image: linear-gradient(180deg,#FFBD36 0%,#FF2200 100%),linear-gradient(180deg,rgb(255,239,177),rgb(242,172,0));
+    box-shadow: 0 0 40px rgba(19,1,49,.6), 0 1px 6px rgba(24,0,73,.7), inset 0 0 5px rgba(255,108,0,.85);
+    color: white !important;
     height: 44px;
     width: 100%;
     font-size: 18px !important;
     letter-spacing: 0 !important;
-    border-radius: 4px !important;
-    border: none;
+    border-radius: 16px !important;
+    border: 3px solid white;
     text-align: center;
 }
 </style>

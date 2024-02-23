@@ -1,7 +1,7 @@
 <template>
     <div class="main-page">
         <div class="header-cover"></div>
-        <div v-if="isList" style="background-color: rgb(112,20,33);">
+        <div v-if="isList" style="background-color: #641BE9;">
             <div class="page-top">
                 <div class="records-top">
                     <img @click="close" :src="require('../../assets/close.png')" />

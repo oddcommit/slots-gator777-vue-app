@@ -222,8 +222,8 @@ export default {
         z-index: 997;
         height: 60px;
         width: 100%;
-        background-image: url("../../assets/index/bg.jpg");
-        background-size: 100% auto;
+        // background-image: url("../../assets/index/bg.jpg");
+        // background-size: 100% auto;
     }
 }
 
@@ -259,7 +259,7 @@ export default {
 
     .vip-body {
         border-radius: 16px;
-        background-color: rgba(91,16,23, 0.9);
+        background-color: #641BE9;
         padding: 20px 14px;
         box-sizing: border-box;
         margin-bottom: 20px;
